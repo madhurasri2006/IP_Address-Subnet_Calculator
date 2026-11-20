@@ -35,11 +35,11 @@ jobs:
         working-directory: frontend
         run: npm ci
 
-     - name: Build
-  working-directory: frontend
-  env:
-    VITE_API_URL: https://ip-address-subnet-calculator.onrender.com
-  run: npm run build
+      - name: Build
+        working-directory: frontend
+        env:
+          VITE_API_URL: https://ip-address-subnet-calculator.onrender.com
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
